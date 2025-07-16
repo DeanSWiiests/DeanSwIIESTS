@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container mt-4">
+  <h2>Admin Dashboard</h2>
+  <h4>Users</h4>
+  <ul>
+    {% for user in users %}
+    <li>{{ user.email }} | Verified: {{ user.is_verified }} | Role: {{ user.role }}</li>
+    {% endfor %}
+  </ul>
+  <h4>Contact Messages</h4>
+  <ul>
+    {% for m in messages %}
+    <li><strong>{{ m.name }}</strong>: {{ m.message }} ({{ m.email }})</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

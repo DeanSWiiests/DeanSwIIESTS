@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container mt-4">
+  <h2>Contact Us</h2>
+  <form method="post">
+    <input type="text" name="name" class="form-control" placeholder="Your Name" required><br>
+    <input type="email" name="email" class="form-control" placeholder="Your Email" required><br>
+    <textarea name="message" class="form-control" rows="4" placeholder="Message" required></textarea><br>
+    <button type="submit" class="btn btn-success">Send Message</button>
+  </form>
+</div>
+{% endblock %}
