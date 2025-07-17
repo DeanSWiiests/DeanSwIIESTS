@@ -1,6 +1,8 @@
-{% extends "layout.html" %}
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
 {% block content %}
-<div class="container mt-4">
-  <h1>Welcome to the Flask App</h1>
-</div>
+<h1 class="text-primary">Welcome to Flask Render App</h1>
+<a href="{{ url_for('auth.login') }}" class="btn btn-outline-primary">Login</a>
 {% endblock %}
